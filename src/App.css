@@ -1,3 +1,8 @@
 form {
     width: 100%
 }
+
+#changingText {
+    color: '#f9f9f9';
+    transition: color 0.5s;
+}
