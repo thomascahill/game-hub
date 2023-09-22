@@ -5,6 +5,7 @@ import {
   List,
   ListItem,
   Spinner,
+  Text,
 } from "@chakra-ui/react";
 import useGenres, { Genre } from "../hooks/useGenres";
 import getCroppedImageUrl from "../services/images-url";
@@ -34,8 +35,9 @@ export default function GenreList({ selectedGenre, onSelectGenre }: Props) {
             onClick={() => onSelectGenre(genre)}
             fontSize="lg"
             variant="link"
+            marginLeft={2}
           >
-            {genre.name}
+            <Text fontSize="xs">{genre.name}</Text>
           </Button>
         </HStack>
       </ListItem>
