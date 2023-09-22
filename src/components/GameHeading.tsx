@@ -12,7 +12,9 @@ export default function GameHeading({ gameQuery }: Props) {
   } Games`;
   return (
     <>
-      <Heading as="h1">{heading}</Heading>
+      <Heading as="h1" fontSize="50px">
+        {heading}
+      </Heading>
     </>
   );
 }

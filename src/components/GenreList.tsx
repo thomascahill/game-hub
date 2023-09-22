@@ -1,6 +1,7 @@
 import {
   Button,
   HStack,
+  Heading,
   Image,
   List,
   ListItem,
@@ -28,16 +29,19 @@ export default function GenreList({ selectedGenre, onSelectGenre }: Props) {
           <Image
             boxSize="32px"
             borderRadius={8}
+            objectFit="cover"
             src={getCroppedImageUrl(genre.image_background)}
           />
           <Button
+            whiteSpace="normal"
+            textAlign="left"
             fontWeight={genre.id === selectedGenre?.id ? "bold" : "normal"}
             onClick={() => onSelectGenre(genre)}
             fontSize="lg"
             variant="link"
-            marginLeft={2}
+            marginLeft={1}
           >
-            <Text fontSize="xs">{genre.name}</Text>
+            <Text fontSize="lg">{genre.name}</Text>
           </Button>
         </HStack>
       </ListItem>
@@ -46,6 +50,9 @@ export default function GenreList({ selectedGenre, onSelectGenre }: Props) {
 
   return (
     <>
+      <Heading fontSize="2xl" marginBottom={3}>
+        Genres
+      </Heading>
       <List>{genresList}</List>
     </>
   );
